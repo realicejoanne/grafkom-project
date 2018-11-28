@@ -5,10 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RubikCube
-{
-    class FaceCube<T>
-    {
+namespace RubikCube {
+    class FaceCube<T> {
         public T Front { get; set; }
         public T Back { get; set; }
         public T Top { get; set; }
@@ -17,8 +15,7 @@ namespace RubikCube
         public T Right { get; set; }
 
 
-        public FaceCube(T Front, T Back, T Up, T Bottom, T Left, T Right)
-        {
+        public FaceCube(T Front, T Back, T Up, T Bottom, T Left, T Right){
             this.Front = Front;
             this.Back = Back;
             this.Top = Up;
@@ -27,55 +24,49 @@ namespace RubikCube
             this.Right = Right;
         }
 
-        public void Rotate(RubikCubeMoviment moviment)
-        {
+        public void Rotate(RubikCubeMoviment moviment){
             var oldState = (FaceCube<T>)this.MemberwiseClone();
 
-            if (moviment.Axis == Axis.X)
-            {
-                if (moviment.Spin == Spin.Clockwise) //Up
-                {
+            if (moviment.Axis == Axis.X){
+                //up
+                if (moviment.Spin == Spin.Clockwise){
                     this.Front = oldState.Bottom;
                     this.Bottom = oldState.Back;
                     this.Back = oldState.Top;
                     this.Top = oldState.Front;
                 }
-                else //Down
-                {
+                //down
+                else {
                     this.Front = oldState.Top;
                     this.Bottom = oldState.Front;
                     this.Back = oldState.Bottom;
                     this.Top = oldState.Back;
                 }
             }
-            else if(moviment.Axis == Axis.Y)
-            {
-                if(moviment.Spin== Spin.Clockwise) //Left
-                {
+            else if(moviment.Axis == Axis.Y){
+                //left
+                if(moviment.Spin== Spin.Clockwise){
                     this.Front = oldState.Right;
                     this.Left = oldState.Front;
                     this.Back = oldState.Left;
                     this.Right = oldState.Back;
                 }
-                else //Right
-                {
+                //right
+                else {
                     this.Front = oldState.Left;
                     this.Left = oldState.Back;
                     this.Back = oldState.Right;
                     this.Right = oldState.Front;
                 }
             }
-            else if(moviment.Axis == Axis.Z)
-            {
-                if(moviment.Spin == Spin.Clockwise) 
-                {
+            else if(moviment.Axis == Axis.Z){
+                if(moviment.Spin == Spin.Clockwise){
                     this.Top = oldState.Left;
                     this.Right = oldState.Top;
                     this.Bottom = oldState.Right;
                     this.Left = oldState.Bottom;
                 }
-                else
-                {
+                else {
                     this.Top = oldState.Right;
                     this.Right = oldState.Bottom;
                     this.Bottom = oldState.Left;

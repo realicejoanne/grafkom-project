@@ -11,18 +11,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tao.OpenGl;
 
-namespace RubikCube
-{
-    public partial class RubikCubeForm : Form
-    {
+namespace RubikCube {
+    public partial class RubikCubeForm : Form {
         private Timer timer;
 
         private RubiksCube rubiksCube;
         private List<Light> lights;
 
-
-        public RubikCubeForm()
-        {
+        public RubikCubeForm(){
             InitializeComponent();
             this.timer = new Timer();
             timer.Tick += Tick;
@@ -42,13 +38,10 @@ namespace RubikCube
             //var lightBack = new Light(Gl.GL_LIGHT0, new float[3] { 0f, 0f, 3f });
             //lights.Add(lightBack);
 
-
             this.Initialize();            
         }
 
-        private void Initialize()
-        {
-
+        private void Initialize(){
             Gl.glViewport(0, 0, this.Width, this.Height);
             Gl.glMatrixMode(Gl.GL_PROJECTION);
             Gl.glLoadIdentity();
@@ -60,70 +53,31 @@ namespace RubikCube
             Gl.glClear(Gl.GL_CLEAR);
         }
 
-        private void Tick(object sender, EventArgs e)
-        {
+        private void Tick(object sender, EventArgs e){
             this.OpenGlControl.Invalidate();
         }
 
-        public void Manipulate(RubikCubeMoviment moviment)
-        {
+        public void Manipulate(RubikCubeMoviment moviment){
             rubiksCube.Manipulate(moviment);
         }
         
-        private void OpenGlControl_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.D)
-            {
+        //pengaturan sudut pandang
+        private void OpenGlControl_KeyDown(object sender, KeyEventArgs e){
+            if (e.KeyCode == Keys.D){ //rotasi ke kanan
                 rubiksCube.Rotate(0, 5, 0);
-                
             }
-            else if (e.KeyCode == Keys.A)
-            {
+            else if (e.KeyCode == Keys.A){ //rotasi ke kiri
                 rubiksCube.Rotate(0, -5, 0);
-                
             }
-            else if (e.KeyCode == Keys.W)
-            {
+            else if (e.KeyCode == Keys.W){ //rotasi ke atas
                 rubiksCube.Rotate(-5, 0, 0);
-                
             }
-            else if (e.KeyCode == Keys.S)
-            {
+            else if (e.KeyCode == Keys.S){ //rotasi ke bawah
                 rubiksCube.Rotate(5, 0, 0);
             }
-
-            else if(e.KeyCode == Keys.B)
-            {
-                foreach(var light in lights)
-                {
-                    light.IsAmbientLightEnabled = !light.IsAmbientLightEnabled;
-                    Debug.WriteLine("State: Ambient: {0}, Diffuse: {1}, Specular: {2} ", light.IsAmbientLightEnabled, light.IsDiffuseLightEnabled, light.IsSpecularLightEnabled);
-                }
-                
-            }
-            else if (e.KeyCode == Keys.N)
-            {
-                foreach (var light in lights)
-                {
-                    light.IsDiffuseLightEnabled = !light.IsDiffuseLightEnabled;
-                    Debug.WriteLine("State: Ambient: {0}, Diffuse: {1}, Specular: {2} ", light.IsAmbientLightEnabled, light.IsDiffuseLightEnabled, light.IsSpecularLightEnabled);
-                }
-                
-            }
-            else if (e.KeyCode == Keys.M)
-            {
-                foreach (var light in lights)
-                {
-                    light.IsSpecularLightEnabled = !light.IsSpecularLightEnabled; Debug.WriteLine("State: Ambient: {0}, Diffuse: {1}, Specular: {2} ", light.IsAmbientLightEnabled, light.IsDiffuseLightEnabled, light.IsSpecularLightEnabled);
-                }
-                
-            }
-
-
         }
 
-        private void OpenGlControl_Paint(object sender, PaintEventArgs e)
-        {
+        private void OpenGlControl_Paint(object sender, PaintEventArgs e){
             
             Gl.glClear(Gl.GL_COLOR_BUFFER_BIT | Gl.GL_DEPTH_BUFFER_BIT);
 
@@ -141,20 +95,22 @@ namespace RubikCube
             
             rubiksCube.Draw();
 
-            foreach(var light in this.lights)
-            {
+            foreach(var light in this.lights){
                 light.Draw();
             }
         }
 
-        private void Form1_SizeChanged(object sender, EventArgs e)
-        {
+        private void Form1_SizeChanged(object sender, EventArgs e){
             OpenGlControl.Width = this.Width;
             OpenGlControl.Height = this.Height;
             Gl.glViewport(0, 0, this.Width, this.Height);
             Gl.glMatrixMode(Gl.GL_PROJECTION);
             Gl.glLoadIdentity();
             Glu.gluPerspective(45.0f, (double)this.Width / (double)this.Height, 0.01f, 5000.0f);
+        }
+
+        private void RubikCubeForm_Load(object sender, EventArgs e){
+
         }
     }
 }

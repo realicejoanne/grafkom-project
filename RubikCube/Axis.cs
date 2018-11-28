@@ -4,10 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RubikCube
-{
-    public enum Axis
-    {
+namespace RubikCube {
+    public enum Axis {
         X,
         Y,
         Z,

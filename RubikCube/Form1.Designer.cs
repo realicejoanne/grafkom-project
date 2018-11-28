@@ -41,22 +41,25 @@
             this.OpenGlControl.BackColor = System.Drawing.Color.Black;
             this.OpenGlControl.ColorBits = ((byte)(32));
             this.OpenGlControl.DepthBits = ((byte)(16));
-            this.OpenGlControl.Location = new System.Drawing.Point(1, 1);
+            this.OpenGlControl.Location = new System.Drawing.Point(2, 2);
+            this.OpenGlControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.OpenGlControl.Name = "OpenGlControl";
-            this.OpenGlControl.Size = new System.Drawing.Size(28, 23);
+            this.OpenGlControl.Size = new System.Drawing.Size(42, 35);
             this.OpenGlControl.StencilBits = ((byte)(0));
             this.OpenGlControl.TabIndex = 0;
             this.OpenGlControl.Paint += new System.Windows.Forms.PaintEventHandler(this.OpenGlControl_Paint);
             this.OpenGlControl.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OpenGlControl_KeyDown);
             // 
-            // Form1
+            // RubikCubeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(618, 392);
+            this.ClientSize = new System.Drawing.Size(927, 603);
             this.Controls.Add(this.OpenGlControl);
-            this.Name = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Name = "RubikCubeForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.RubikCubeForm_Load);
             this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged);
             this.ResumeLayout(false);
 

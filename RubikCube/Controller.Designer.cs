@@ -44,9 +44,10 @@
             // 
             // btnFirstXUp
             // 
-            this.btnFirstXUp.Location = new System.Drawing.Point(40, 12);
+            this.btnFirstXUp.Location = new System.Drawing.Point(60, 18);
+            this.btnFirstXUp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnFirstXUp.Name = "btnFirstXUp";
-            this.btnFirstXUp.Size = new System.Drawing.Size(30, 23);
+            this.btnFirstXUp.Size = new System.Drawing.Size(45, 35);
             this.btnFirstXUp.TabIndex = 0;
             this.btnFirstXUp.Text = "/\\";
             this.btnFirstXUp.UseVisualStyleBackColor = true;
@@ -54,9 +55,10 @@
             // 
             // btnSecondXUp
             // 
-            this.btnSecondXUp.Location = new System.Drawing.Point(76, 12);
+            this.btnSecondXUp.Location = new System.Drawing.Point(114, 18);
+            this.btnSecondXUp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSecondXUp.Name = "btnSecondXUp";
-            this.btnSecondXUp.Size = new System.Drawing.Size(30, 23);
+            this.btnSecondXUp.Size = new System.Drawing.Size(45, 35);
             this.btnSecondXUp.TabIndex = 1;
             this.btnSecondXUp.Text = "/\\";
             this.btnSecondXUp.UseVisualStyleBackColor = true;
@@ -64,9 +66,10 @@
             // 
             // btnThirdXUp
             // 
-            this.btnThirdXUp.Location = new System.Drawing.Point(112, 12);
+            this.btnThirdXUp.Location = new System.Drawing.Point(168, 18);
+            this.btnThirdXUp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnThirdXUp.Name = "btnThirdXUp";
-            this.btnThirdXUp.Size = new System.Drawing.Size(30, 23);
+            this.btnThirdXUp.Size = new System.Drawing.Size(45, 35);
             this.btnThirdXUp.TabIndex = 2;
             this.btnThirdXUp.Text = "/\\";
             this.btnThirdXUp.UseVisualStyleBackColor = true;
@@ -74,19 +77,21 @@
             // 
             // btnSecondYLeft
             // 
-            this.btnSecondYLeft.Location = new System.Drawing.Point(10, 70);
+            this.btnSecondYLeft.Location = new System.Drawing.Point(15, 108);
+            this.btnSecondYLeft.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSecondYLeft.Name = "btnSecondYLeft";
-            this.btnSecondYLeft.Size = new System.Drawing.Size(28, 23);
+            this.btnSecondYLeft.Size = new System.Drawing.Size(42, 35);
             this.btnSecondYLeft.TabIndex = 3;
-            this.btnSecondYLeft.Text = "<-";
+            this.btnSecondYLeft.Text = "<";
             this.btnSecondYLeft.UseVisualStyleBackColor = true;
             this.btnSecondYLeft.Click += new System.EventHandler(this.btnSecondYLeft_Click);
             // 
             // btnFirstXDown
             // 
-            this.btnFirstXDown.Location = new System.Drawing.Point(40, 128);
+            this.btnFirstXDown.Location = new System.Drawing.Point(60, 197);
+            this.btnFirstXDown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnFirstXDown.Name = "btnFirstXDown";
-            this.btnFirstXDown.Size = new System.Drawing.Size(30, 23);
+            this.btnFirstXDown.Size = new System.Drawing.Size(45, 35);
             this.btnFirstXDown.TabIndex = 4;
             this.btnFirstXDown.Text = "\\/";
             this.btnFirstXDown.UseVisualStyleBackColor = true;
@@ -94,59 +99,65 @@
             // 
             // btnFirstYLeft
             // 
-            this.btnFirstYLeft.Location = new System.Drawing.Point(10, 99);
+            this.btnFirstYLeft.Location = new System.Drawing.Point(15, 152);
+            this.btnFirstYLeft.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnFirstYLeft.Name = "btnFirstYLeft";
-            this.btnFirstYLeft.Size = new System.Drawing.Size(28, 23);
+            this.btnFirstYLeft.Size = new System.Drawing.Size(42, 35);
             this.btnFirstYLeft.TabIndex = 9;
-            this.btnFirstYLeft.Text = "<-";
+            this.btnFirstYLeft.Text = "<";
             this.btnFirstYLeft.UseVisualStyleBackColor = true;
             this.btnFirstYLeft.Click += new System.EventHandler(this.btnThirdYLeft_Click);
             // 
             // btnThirdYLeft
             // 
-            this.btnThirdYLeft.Location = new System.Drawing.Point(10, 41);
+            this.btnThirdYLeft.Location = new System.Drawing.Point(15, 63);
+            this.btnThirdYLeft.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnThirdYLeft.Name = "btnThirdYLeft";
-            this.btnThirdYLeft.Size = new System.Drawing.Size(28, 23);
+            this.btnThirdYLeft.Size = new System.Drawing.Size(42, 35);
             this.btnThirdYLeft.TabIndex = 12;
-            this.btnThirdYLeft.Text = "<-";
+            this.btnThirdYLeft.Text = "<";
             this.btnThirdYLeft.UseVisualStyleBackColor = true;
             this.btnThirdYLeft.Click += new System.EventHandler(this.btnFirstYLeft_Click);
             // 
             // btnThirdYRight
             // 
-            this.btnThirdYRight.Location = new System.Drawing.Point(144, 41);
+            this.btnThirdYRight.Location = new System.Drawing.Point(216, 63);
+            this.btnThirdYRight.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnThirdYRight.Name = "btnThirdYRight";
-            this.btnThirdYRight.Size = new System.Drawing.Size(28, 23);
+            this.btnThirdYRight.Size = new System.Drawing.Size(42, 35);
             this.btnThirdYRight.TabIndex = 15;
-            this.btnThirdYRight.Text = "->";
+            this.btnThirdYRight.Text = ">";
             this.btnThirdYRight.UseVisualStyleBackColor = true;
             this.btnThirdYRight.Click += new System.EventHandler(this.btnFirstYRight_Click);
             // 
             // btnFirstYRight
             // 
-            this.btnFirstYRight.Location = new System.Drawing.Point(144, 99);
+            this.btnFirstYRight.Location = new System.Drawing.Point(216, 152);
+            this.btnFirstYRight.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnFirstYRight.Name = "btnFirstYRight";
-            this.btnFirstYRight.Size = new System.Drawing.Size(28, 23);
+            this.btnFirstYRight.Size = new System.Drawing.Size(42, 35);
             this.btnFirstYRight.TabIndex = 14;
-            this.btnFirstYRight.Text = "->";
+            this.btnFirstYRight.Text = ">";
             this.btnFirstYRight.UseVisualStyleBackColor = true;
             this.btnFirstYRight.Click += new System.EventHandler(this.btnThirdYRight_Click);
             // 
             // btnSecondYRight
             // 
-            this.btnSecondYRight.Location = new System.Drawing.Point(144, 70);
+            this.btnSecondYRight.Location = new System.Drawing.Point(216, 108);
+            this.btnSecondYRight.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSecondYRight.Name = "btnSecondYRight";
-            this.btnSecondYRight.Size = new System.Drawing.Size(28, 23);
+            this.btnSecondYRight.Size = new System.Drawing.Size(42, 35);
             this.btnSecondYRight.TabIndex = 13;
-            this.btnSecondYRight.Text = "->";
+            this.btnSecondYRight.Text = ">";
             this.btnSecondYRight.UseVisualStyleBackColor = true;
             this.btnSecondYRight.Click += new System.EventHandler(this.btnSecondYRight_Click);
             // 
             // btnSecondXDown
             // 
-            this.btnSecondXDown.Location = new System.Drawing.Point(76, 128);
+            this.btnSecondXDown.Location = new System.Drawing.Point(114, 197);
+            this.btnSecondXDown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSecondXDown.Name = "btnSecondXDown";
-            this.btnSecondXDown.Size = new System.Drawing.Size(30, 23);
+            this.btnSecondXDown.Size = new System.Drawing.Size(45, 35);
             this.btnSecondXDown.TabIndex = 16;
             this.btnSecondXDown.Text = "\\/";
             this.btnSecondXDown.UseVisualStyleBackColor = true;
@@ -154,19 +165,20 @@
             // 
             // btnThirdXDown
             // 
-            this.btnThirdXDown.Location = new System.Drawing.Point(112, 128);
+            this.btnThirdXDown.Location = new System.Drawing.Point(168, 197);
+            this.btnThirdXDown.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnThirdXDown.Name = "btnThirdXDown";
-            this.btnThirdXDown.Size = new System.Drawing.Size(30, 23);
+            this.btnThirdXDown.Size = new System.Drawing.Size(45, 35);
             this.btnThirdXDown.TabIndex = 17;
             this.btnThirdXDown.Text = "\\/";
             this.btnThirdXDown.UseVisualStyleBackColor = true;
             this.btnThirdXDown.Click += new System.EventHandler(this.btnThirdXDown_Click);
             // 
-            // Controller
+            // ControllerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(184, 174);
+            this.ClientSize = new System.Drawing.Size(276, 268);
             this.Controls.Add(this.btnThirdXDown);
             this.Controls.Add(this.btnSecondXDown);
             this.Controls.Add(this.btnThirdYRight);
@@ -179,9 +191,11 @@
             this.Controls.Add(this.btnThirdXUp);
             this.Controls.Add(this.btnSecondXUp);
             this.Controls.Add(this.btnFirstXUp);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
-            this.Name = "Controller";
+            this.Name = "ControllerForm";
             this.Text = "Controller";
+            this.Load += new System.EventHandler(this.ControllerForm_Load);
             this.ResumeLayout(false);
 
         }

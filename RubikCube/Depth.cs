@@ -4,10 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RubikCube
-{
-    public enum Depth
-    {
+namespace RubikCube {
+    public enum Depth {
         First,
         Second,
         Third
