@@ -1,5 +1,5 @@
 # Rubik Cube with OpenGL
-Computer Graphic Project by Patricia (140810160065)
+Computer Graphic Project by Patricia (140810160065).
 
 How to use it?
 
